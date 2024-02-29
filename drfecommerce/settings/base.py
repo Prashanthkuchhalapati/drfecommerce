@@ -19,7 +19,7 @@ load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY=os.environ.get("SECRET_KEY")
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 
 # Quick-start development settings - unsuitable for production
@@ -31,7 +31,6 @@ SECRET_KEY=os.environ.get("SECRET_KEY")
 DEBUG = True
 
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -41,9 +40,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    #external packages
-    "rest_framework"
-    #internal apps
+    # external packages
+    "rest_framework",
+    # internal apps
+    "product",
 ]
 
 MIDDLEWARE = [
@@ -75,9 +75,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "drfecommerce.wsgi.application"
-
-
-
 
 
 # Password validation
@@ -121,4 +118,4 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-REST_FRAMEWORK={}
+REST_FRAMEWORK = {}
